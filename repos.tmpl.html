@@ -1,0 +1,42 @@
+<nav class="navbar navbar-inverse">
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" ><a href="#/profile/{{reposVm.uname}}">Profile</a></li>
+        <li role="presentation" class="active"><a href="#/repos/{{profileVm.user.login}}">Repos</a></li>
+        <li role="presentation"><a href="#/gists/{{reposVm.uname}}">Gists</a></li>
+
+        <li role="presentation"><a href="#">Logout</a></li>
+    </ul>
+</nav>
+<h6> User Repositories</h6>
+<div class="content">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th><a href="#"/> Repo Name </th>
+                <th> Description </th>
+                <th> Homepage </th>
+                <th> Private </th>
+                <th> Has Issues</th>
+                <th> Has Wikis </th>
+                <th> Has Downloads </th>
+                <th> Default Branch </th>
+
+            <tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat ="r in reposVm.repos">
+                <td><a ng href="#/updaterepo/{{reposVm.uname}}/{{r.name}}">{{r.name}}</td>
+                <td>{{r.description}}</td>
+                <td>{{r.homepage}}</td>
+                <td>{{r.private}}</td>
+                <td>{{r.has_issues}}</td>
+                <td>{{r.has_wiki}}</td>
+                <td>{{r.has_downloads}}</td>
+                <td>{{r.default_branch}}</td>
+            </tr>
+
+        </table>
+
+
+</div>

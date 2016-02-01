@@ -1,0 +1,34 @@
+<h6>GitHub Credentials</h6>
+<div class="content" ng-controller="LoginController as  loginVm">
+    <form role="form" ng-submit="loginVm.submit(user)">
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Git Hub UserName" ng-model="user.uname">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <input class="form-control" type="password" placeholder="Password" >
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit"  class="btn large-btn btn-primary">Submit</button>
+
+        </div>
+    </form>
+</div>
