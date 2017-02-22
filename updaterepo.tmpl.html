@@ -1,0 +1,56 @@
+<nav class="navbar navbar-inverse">
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" ><a href="#/profile/{{updaterepoVm.user.login}}">Profile</a></li>
+        <li role="presentation" class="active"><a href="#/repos/{{updaterepoVm.user.login}}">Repos</a></li>
+
+        <li role="presentation"><a href="#">Logout</a></li>
+    </ul>
+</nav>
+<h6> Update Repositories</h6>
+
+<label>username : {{updaterepoVm.uname}}</label>
+<div class="content">
+    <form ng-submit="updaterepoVm.update(repo)" ng-contoller="UpdateRepoController as updaterepoVm">
+        <div class="form-group">
+
+
+            <a  href="#/pull/{{updaterepoVm.user.login}}/{{ updaterepoVm.id}}" class="btn btn-link" role="button">Pull Requests</a>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="name"> Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" ng-model="repo.name">
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="name">Description</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Description" ng-model="repo.description">
+                </div>
+                <div class="col-sm-4">
+                    <label for="name">Homepage</label>
+                    <input type="text" class="form-control" id="name" placeholder="Homepage URL" ng-model="repo.homepage">
+                </div>
+                <div class="col-sm-4">
+                    <label for="name">Private</label>
+                    <input type="text" class="form-control" id="name" placeholder="True/False" ng-model="repo.private">
+                </div>
+                <div class="col-sm-4">
+                    <label for="name">Enable Issues</label>
+                    <input type="text" class="form-control" id="name" placeholder="True/False" ng-model="repo.has_issues">
+                </div>
+                <div class="col-sm-4">
+                    <label for="name">Enable Wiki</label>
+                    <input type="text" class="form-control" id="name" placeholder="True/False" ng-model="repo.has_wiki">
+                </div>
+                <div class="col-sm-4">
+                    <label for="name">Confirm password</label>
+                    <input type="password" class="form-control" id="name" placeholder="Password" ng-model="repo.pass">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" >Update Repo</button>
+
+
+
+    </form>
+
+
+    </div>

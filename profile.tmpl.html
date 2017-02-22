@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse">
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" class="active"><a href="#/profile/{{profileVm.user.login}}">Profile</a></li>
+        <li role="presentation"><a href="#/repos/{{profileVm.user.login}}">Repos</a></li>
+        <li role="presentation"><a href="#/gists/{{profileVm.user.login}">Gists</a></li>
+
+        <li role="presentation"><a href="#">Logout</a></li>
+    </ul>
+</nav>
+<h6>User Profile</h6>
+<div class="content">
+
+<label> Name: {{ profileVm.user.name}} </label><br>
+<label> UserName: {{ profileVm.user.login}} </label><br>
+<label> Company: {{ profileVm.user.company}} </label><br>
+<label> blog: {{ profileVm.user.blog}} </label><br>
+<label> Location: {{ profileVm.user.location}} </label><br>
+<label> Email: {{ profileVm.user.Email}} </label><br>
+<label> Bio: {{ profileVm.user.bio}} </label><br>
+<label> Public Repos: {{ profileVm.user.public_repos}} </label><br>
+<label> Public Gists: {{ profileVm.user.public_gists}} </label><br>
+<label> Followers: {{ profileVm.user.followers}} </label><br>
+<label> Following: {{ profileVm.user.following}} </label>
+    </div>
